@@ -12,7 +12,6 @@ O software encripta e desencripta mensagens usando criptografia RSA.
 
 Baseado em algoritmo feito por Lionel em 2008: http://cppgm.blogspot.com.br/2008/01/rsa-algorithm.html
 */
-
 char msg[1024];
 int msgint[1024];
 int tamanhoDaString;
@@ -50,15 +49,15 @@ int verificar_primo(unsigned int numero) {
 Função desenvolvida Elgio Schlemer http://www.vivaolinux.com.br/script/Algoritmo-de-euclides-estendido-%28calcula-o-D-RSA%29
 */
 long mod(long a, long b) {
+	
   long r = a % b;
 
   // uma correção é necessária se r e b não forem do mesmo sinal
-
   // se r for negativo e b positivo, precisa corrigir */
   if ((r < 0) && (b > 0)) {
     return (b + r);
   }
-
+	
   /* Se r for positivo e b negativo, nova correcao */
   if ((r > 0) && (b < 0)) {
     return (b + r);
